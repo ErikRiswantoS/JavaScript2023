@@ -1,23 +1,22 @@
-const Nama = "Erik Riswanto Saputra"
-const NIM = 20220040226
+const pendapatanHarian = 600000; 
+let uangJasa, persentaseKomisi;
 
-// aritmatika Pada JavaScript
+if (pendapatanHarian <= 200000) {
+    uangJasa = 10000;
+    persentaseKomisi = 0.1;
+} else if (pendapatanHarian > 200000 && pendapatanHarian <= 500000) {
+    uangJasa = 20000;
+    persentaseKomisi = 0.15;
+} else {
+    uangJasa = 30000;
+    persentaseKomisi = 0.2;
+}
 
-const Angka1 = 20
-const Angka2 = 10
+const komisi = pendapatanHarian * persentaseKomisi;
 
-const Tambah = Angka1 + Angka2 ;
-const Kurang = Angka1 - Angka2 ;
-const Kali = Angka1 * Angka2 ;
-const Bagi = Angka1 / Angka2 ;
+const totalPendapatan = uangJasa + komisi;
 
-// input variabel
-
-console.log(`Nama Saya ` +  Nama)
-console.log(`NIM Saya `  +  NIM)
-console.log("Pertambahan :  " + Tambah)
-console.log("Perkurangan :  " + Kurang)
-console.log("Perkalian :    " + Kali)
-console.log("Perbagian :    " + Bagi)
-
-
+console.log("Pendapatan Harian: Rp. " + pendapatanHarian);
+console.log("Uang Jasa: Rp. " + uangJasa);
+console.log("Komisi: Rp. " + komisi);
+console.log("Total Pendapatan: Rp. " + totalPendapatan);
